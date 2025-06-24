@@ -1,4 +1,5 @@
-#Numpy
+# Numpy
+
 in the first file numpy_intro.py
 
 i learn about Creating Array and Other syntax
