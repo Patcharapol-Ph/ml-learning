@@ -11,6 +11,7 @@ I divide the topic as
 All the matherial i use in this will be use from w3schools but the topic i get from asking chatGPT
 
 link
+
 Numpy:https://www.w3schools.com/python/numpy/default.asp
 Pandas:https://www.w3schools.com/python/pandas/default.asp
 Matplotlib:https://www.w3schools.com/python/matplotlib_intro.asp
