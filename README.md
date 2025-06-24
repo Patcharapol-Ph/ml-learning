@@ -9,6 +9,7 @@ I divide the topic as
 4. Machine Learning
 
 All the matherial i use in this will be use from w3schools but the topic i get from asking chatGPT
+This Document purpose is only to document about my learning and also a pratice for me about using Github
 
 link
 
