@@ -56,3 +56,38 @@ and STEP which will determind which value will return from array
 Ex. arr[::2] = [1,3,5]
 which can also be use with slicing
 Ex. arr[1:4:3] = [1,4]
+
+---
+
+in numpy_02 i learn about
+type of data stored in array in which can be defined with syntax
+dtype when initiated the array
+Ex. a = np.array([1,2,3,4], dtype="i")
+
+in which the type in dtype are
+i: integer
+b: boolean
+u: unsigned integer
+f: float
+c: complex float
+m: timedelta
+M: datetime
+O: object
+S: string
+U: unicode string
+V: void
+
+as the array can also beconvert after with syntax astype
+Ex. a = np.array([1.1,2.2,3.3,4.4,5.5,6.6])
+b = np.array([1,0,-1])
+
+    a.astype("i") = [1,2,3,4,5,6]
+    b.astype("b") = [True,False,True]
+
+and also array can be copy using .copy()
+Ex. a = np.array([1,2,3,4])
+b = a.copy()
+
+    b = [1,2,3,4]
+
+---
