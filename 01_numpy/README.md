@@ -91,3 +91,40 @@ b = a.copy()
     b = [1,2,3,4]
 
 ---
+
+in numpy_03 i learn about sharp of array and how to re shape
+Ex. a = np.array([[1,2],[3,4],[5,6]])
+a.shape() = (3,2)
+
+and you can reshape Array with syntax reshape() but the array must match the reshapre
+or else the function will return error
+Ex a.reshape(2,3) = [[1,2,3],[4,5,6]]
+a.reshape(2,4) = result in error because the Array not match the reshape
+
+and how to iterate the array can be use with simple for loop
+but can also beuse with nditer() in which can have and argument to use which range in array or use step
+Ex. a = np.array([1,2,3,4,5,6])
+for x in a:
+print(a)
+
+    result:
+        1
+        2
+        3
+        4
+        5
+        6
+
+    for x in a.nditer()
+        print(x)
+
+will have the same resultbut nditer can be with arument such as
+Ex. b = np.array([[1,2,3],[4,5,6]])
+for x in b.nditer(:,::2)
+print(x)
+
+    result:
+        1
+        3
+        4
+        6
