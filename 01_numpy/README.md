@@ -128,3 +128,155 @@ print(x)
         3
         4
         6
+
+---
+
+next is numpy_04 i just cramped all the remaining course in w3school
+this is he results of my training:
+
+array join can be dont in difference way like
+concatenate will join the two array next to each other
+Ex. x = np.array([1,2,3])
+y = np.array([4,5,6])
+
+    arr = np.concatenate(x,y)
+
+    print(arr)
+    result:
+        [1,2,3,4,5,6]
+
+stack which just like concatenate but can change the axis it join the array require an axis to tell the function which axis will be stacjing
+Ex. arr = np.stack(x,y, axis=1)
+
+    result:
+        [[1,4],
+            [2,5],
+            [3,6]]
+
+hstack and vstack work like stack but just state whih direction will be stacking
+Ex. arr = np.hstack(x,y)
+arr = np.vstack(x,y)
+
+    result:
+        [1,2,3,4,5,6]
+        [[1,2,3],
+            [4,5,6]]
+
+dstack is stack with the depth of the array
+Ex. x = 1 y = 4
+2 5
+3 6
+
+    stack with depth result in [[1,4],[2,5],[3,6]]
+
+next is spliting the argument to tell function how many array use want to split into doesn't need to mach the array because the function will adjust the array as the argument
+
+Ex x = np.array([1,2,3,4,5,6])
+x = x.array_split(x, 4)
+
+    result:
+        [array([1, 2]), array([3, 4]), array([5]), array([6])]
+
+the split can be use in any array dimention can also add axis or use hsplit to get the same result if axis = 1
+Ex. arr = np.array([[1, 2, 3], [4, 5, 6], [7, 8, 9], [10, 11, 12], [13, 14, 15], [16, 17, 18]])
+
+    newarr = np.hsplit(arr, 3) or
+    newarr = np.array_split(arr, 3, axis=1)
+
+    result:
+        [array([[ 1],
+            [ 4],
+            [ 7],
+            [10],
+            [13],
+            [16]]), array([[ 2],
+            [ 5],
+            [ 8],
+            [11],
+            [14],
+            [17]]), array([[ 3],
+            [ 6],
+            [ 9],
+            [12],
+            [15],
+            [18]])]
+
+now is array search have two way to search an Array
+first is np.where will returen the position of Array can work in any dimentsion of array and can use function in the where
+Ex. x = np.array([1,2,3,4,5])
+
+    x = np.where(x == 3)
+
+    result:
+        [2]
+
+    or use with and function
+
+    x = np.where(x%2 == 0) //to find even number
+
+    result:
+        [1,3]
+
+the other search is np.searchsorted use in and sort array because it iterlate the array to find which spot that the function get to add in array to make it sort
+Ex. x = np.array9[1,2,3,4,5]
+
+# this is to find the position where if add the number 6 to the array which position still make the array sort which is next to 5
+
+    x = np.searchsorted(x,6)
+
+the function can also add side to told the function which side to start form
+
+- the side sometime effect the out put value of the function but does not effect the array because if default searchsorted will search from the left which will make it add value at the front but if the side is right it will place the value in the ack insted result in just 1 value difference
+
+next is sort which will sort the smallest array can be work with any array dimension
+Ex. arr = np.array([[6,9,8],[4,1,5]])
+
+    x = np.sort(arr)
+
+    result:
+        [[6 8 9]
+            [1 4 5]]
+
+and lastly is array filter numpy can exclude the data from array if give boolean to the position
+Ex. arr = np.array([41, 42, 43, 44])
+
+    x = [True, False, True, False]
+
+    newarr = arr[x]
+
+    result:
+        [41,43]
+
+with this can be make to and function to filter the array like this w3school example
+arr = np.array([41, 42, 43, 44])
+
+# Create an empty list
+
+filter_arr = []
+
+# go through each element in arr
+
+for element in arr:
+
+# if the element is higher than 42, set the value to True, otherwise False:
+
+if element > 42:
+filter_arr.append(True)
+else:
+filter_arr.append(False)
+
+newarr = arr[filter_arr]
+
+print(filter_arr)
+print(newarr)
+
+but i tried to use this logic to work with the 2 dimentsion array but the problem is the filter_arr is and list and i don't know how to do that so i search online and found that it can just insert the function directly like this
+
+arr = np.array([[1,2,3,4,5],[6,7,8,9,10]])
+
+arr = arr[arr%2 == 0]
+
+result:
+[2 4 6 8 10]
+
+and that it!! i finish w3shcool numpy course the next part is i will be using this knowledge to create some mini project that focus on using numpy which of course the topic of project come from my dear friend ChatGPT
