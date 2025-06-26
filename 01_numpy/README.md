@@ -78,14 +78,16 @@ U: unicode string
 V: void
 
 as the array can also beconvert after with syntax astype
-Ex. a = np.array([1.1,2.2,3.3,4.4,5.5,6.6])
+
+a = np.array([1.1,2.2,3.3,4.4,5.5,6.6])
 b = np.array([1,0,-1])
 
     a.astype("i") = [1,2,3,4,5,6]
     b.astype("b") = [True,False,True]
 
 and also array can be copy using .copy()
-Ex. a = np.array([1,2,3,4])
+
+a = np.array([1,2,3,4])
 b = a.copy()
 
     b = [1,2,3,4]
